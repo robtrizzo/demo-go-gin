@@ -16,6 +16,8 @@ func main() {
 	// Handle Index
 	router.GET("/", handlers.ShowIndexPage)
 	router.GET("/article/view/:article_id", handlers.GetArticle)
+	router.GET("/search", handlers.GetSearchPage)
+	router.POST("/search", handlers.Search)
 	// Serve the application
 	router.Run()
 }
